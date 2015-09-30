@@ -30,6 +30,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Devise
 gem 'devise', '~> 3.5.0'
 
+# SAAS - Already installed on line 9
+#gem 'saas'
+
 
 
 # Use ActiveModel has_secure_password
