@@ -13,3 +13,172 @@
  *= require_tree .
  *= require_self
  */
+
+/*====================
+DEFAULT
+====================*/
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Yeseva+One);
+
+/*Reset*/
+html { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+	color: #000; 
+	font-size: 16px; 
+	line-height: 1; 
+}
+*, 
+*:before, 
+*:after { 
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit; 
+}
+body { 
+	background: #f5f5f5; 
+	font-family: "Merriweather Sans", Helvetica, Arial, sans-serif; 
+	font-size-adjust: none; 
+	margin: 0; 
+	overflow-x: hidden; 
+	padding: 0 4% 0; 
+	position: relative; 
+	text-rendering: geometricPrecision;
+	-webkit-text-size-adjust: none; 
+	width: 100%; 
+}
+nav, 
+header, 
+main, 
+article, 
+section, 
+figure, 
+footer { 
+	display: block; 
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 { 
+	font-family: "Yeseva One", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+p { 
+	font-size: 1em;
+	line-height: 1.4;
+	margin: 0;
+}
+p + p { 
+	margin-top: 1em;
+}
+label, 
+.field em { 
+	color: rgba(0,0,0,0.75);
+	display: block;
+	font-size: 0.875em;
+	font-weight: 400;
+	line-height: 1.1;
+	margin-bottom: 0.25em;
+	text-transform: capitalize;
+}
+button, 
+input, 
+select, 
+textarea { 
+	color: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+input, 
+select, 
+textarea { 
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    appearance: none; 
+    -webkit-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	border-radius: 0.25em; 
+    border: 1px solid #000;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;  
+    box-shadow: none; 
+    outline: 0;  
+    padding: 0.5em 1em;
+    width: 100%;
+}
+input[type="submit"] { 
+	background: #000;
+	color: #fff;
+	margin: 1em 0;
+	text-align: center;
+	/*text-transform: capitalize;*/
+}
+input[type="submit"], 
+button, 
+a { 
+	cursor: pointer;
+}
+a img { 
+	border: none; 
+	outline: none; 
+} 
+.is-invisible { 
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    color: transparent;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+/*Main*/
+main { 
+	height: 85vh;
+	position: relative;
+}
+
+/*Home - About Us*/
+#intro { 
+	bottom: 0;
+	height: 30em;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	width: 55vw;
+}
+
+/*Home - Sign Up*/
+aside { 
+	background: #fff;
+	border: 1px solid #000;
+	-webkit-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	border-radius: 0.25em;
+	bottom: 0;
+	height: 35em;
+	margin: auto;
+	padding: 2em;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 30vw;
+}
+
+/*Forms*/
+.field + .field { 
+	margin-top: 1em;
+}
+
+/*Footer*/
+footer { 
+	height: 15vh;
+	font-weight: 400;
+	padding: 1em 0;
+	text-align: center;
+}

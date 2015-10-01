@@ -1,41 +1,38 @@
-<% content_for :head do %>
-	<title>Cookie Bracket Home</title>
-<% end %>
-
 <main role="main">
-	<h1>Welcome to Cookie Bracket</h1>
+	<div id="intro">
+		<h1>Welcome to the Cookie Bracket</h1>
+		<p>In August, 2015, the Email Marketing team at WeddingWire had only one question on their minds: <em>who sells the best chocolate chip cookie in the neighborhood?</em> (It was the slow season.)</p>
+		<p>Being the innovators they are, they decided to find out.</p>
+		<p>They identified 12 local stores &mdash; ranging from chain restaurants, to national supermarkets, to the bakery across the street &mdash; and established a taste-testing bracket to answer this question once and for all.</p>
+		<p>Now digital, the Cookie Bracket is <em>yours</em> to try. Gather your friends. Pick your contestants. Taste some cookies. Find the best. And, of course, have fun!</p>
+	</div>
+	<aside role="complementary">
+		<h2>Sign up to get started!</h2>
+		<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+		  <%= devise_error_messages! %>
+		  <div class="field">
+		    <%= f.label :email %>
+		    <%= f.email_field :email, autofocus: true %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :nickname %>
+		    <%= f.text_field :nickname %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :password %>
+		    <% if @minimum_password_length %>
+		    <em>(<%= @minimum_password_length %> characters minimum)</em>
+		    <% end %>
+		    <%= f.password_field :password, autocomplete: "off" %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :password_confirmation %>
+		    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+		  </div>
+		  <div class="actions">
+		    <%= f.submit "Turn on your tastebuds" %>
+		  </div>
+		<% end %>
+		<%= render "devise/shared/links" %>
+	</aside>
 </main>
-<aside role="complementary">
-	<h2>Sign up to get started!</h2>
-	<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-	  <%= devise_error_messages! %>
-
-	  <div class="field">
-	    <%= f.label :email %><br />
-	    <%= f.email_field :email, autofocus: true %>
-	  </div>
-
-	  <div class="field">
-	    <%= f.label :nickname %><br />
-	    <%= f.text_field :nickname %>
-	  </div>
-
-	  <div class="field">
-	    <%= f.label :password %>
-	    <% if @minimum_password_length %>
-	    <em>(<%= @minimum_password_length %> characters minimum)</em>
-	    <% end %><br />
-	    <%= f.password_field :password, autocomplete: "off" %>
-	  </div>
-
-	  <div class="field">
-	    <%= f.label :password_confirmation %><br />
-	    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-	  </div>
-
-	  <div class="actions">
-	    <%= f.submit "Sign up" %>
-	  </div>
-	<% end %>
-	<%= render "devise/shared/links" %>
-</aside>
