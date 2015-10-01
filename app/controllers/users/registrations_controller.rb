@@ -1,4 +1,10 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+
+	def create
+		redirect_to :authenticated_root
+	end
+
+
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
 

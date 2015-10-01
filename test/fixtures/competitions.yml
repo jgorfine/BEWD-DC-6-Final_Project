@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  start: 2015-10-01 01:25:18
+  end: 2015-10-01 01:25:18
+  ultimate_champion: MyString
+
+two:
+  name: MyString
+  description: MyText
+  start: 2015-10-01 01:25:18
+  end: 2015-10-01 01:25:18
+  ultimate_champion: MyString

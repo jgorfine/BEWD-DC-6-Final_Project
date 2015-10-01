@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
 
-	root "welcome#index"
-  	#get "welcome/", to: "welcome#index"
-  	#get "/", to: "welcome#index"
-
 	devise_for :users, controllers: {
 		sessions: 'users/sessions'
 	}
 
-	# desvise_scope :user do
-	# 	get "sign-in", to: "users/sessions#new"
-	# end
+	authenticated :user do 
+		root to: "welcome#dashboard", as: :authenticated_root
+	end
 
-  	resources :users, only: [:new, :create, :show]
+	devise_scope :user do
+		root to: 'users/registrations#new'
+		#get "sign-in", to: "users/sessions#new"
+    	#get "", as: :registration_path
+	end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
