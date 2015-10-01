@@ -1,19 +1,19 @@
 <h1>Create a New Competition</h1>
 <%= form_for @competition do |field| %>
 	<fieldset>
-		<div>
+		<div class="field">
 			<%= field.label :name %>
 			<%= field.text_field :name %>
 		</div>
-		<div>
+		<div class="field">
 			<%= label_tag "Participants" %>
 			<%= select_tag "participants", options_from_collection_for_select(User.all, 'id', 'nickname', @competition.users.map{ |j| j.id }), :multiple => true %>
 		</div>
-		<div>
+		<div class="field">
 			<%= field.label "Start Date" %>
 			<%= field.datetime_local_field :start %>
 		</div>
-		<div>
+		<div class="field">
 			<%= field.label "End Date" %>
 			<%= field.datetime_local_field :end %>
 		</div>
