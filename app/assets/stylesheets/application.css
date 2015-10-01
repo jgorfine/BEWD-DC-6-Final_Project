@@ -108,8 +108,11 @@ textarea {
     box-shadow: none; 
     outline: 0;  
     padding: 0.5em 1em;
-    width: 100%;
 }
+input:not([type="checkbox"]) { 
+	width: 100%;
+} 
+
 input[type="submit"] { 
 	background: #000;
 	color: #fff;
@@ -117,10 +120,20 @@ input[type="submit"] {
 	text-align: center;
 	/*text-transform: capitalize;*/
 }
+input[type="submit"]:hover { 
+	background: #660033;
+}
 input[type="submit"], 
 button, 
 a { 
 	cursor: pointer;
+}
+a, 
+a:visited { 
+	color: inherit;
+}
+a:hover { 
+	color: #660033;
 }
 a img { 
 	border: none; 
@@ -177,6 +190,7 @@ aside {
 
 /*Footer*/
 footer { 
+	color: #660033;
 	height: 15vh;
 	font-weight: 400;
 	padding: 1em 0;
