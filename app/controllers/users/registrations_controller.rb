@@ -4,6 +4,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
 		redirect_to :authenticated_root
 	end
 
+	# def update
+	# 	@user = User.find(params[:id])
+	# 	if @user.update safe_nickname_params
+	# 		redirect_to :authenticated_root
+	# 	else
+			
+	# 	end
+	# end
+
+
+	private
+
+	def safe_nickname_params
+		params.permit(:nickname)
+	end
+
 
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]

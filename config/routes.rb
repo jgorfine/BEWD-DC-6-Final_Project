@@ -10,9 +10,13 @@ Rails.application.routes.draw do
 
 	devise_scope :user do
 		root to: 'users/registrations#new'
-		#get "sign-in", to: "users/sessions#new"
-    	#get "", as: :registration_path
 	end
+
+	# devise_for :users, controllers: {
+	# 	registrations: 'users/registrations'
+	# }
+
+	resources :competitions
 
 
   # The priority is based upon order of creation: first created -> highest priority.
